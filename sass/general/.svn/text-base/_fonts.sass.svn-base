@@ -1,0 +1,89 @@
+//https://github.com/lloydk/font-stack/blob/master/lib/stylesheets/_font-stack.scss
+@import "font-stack"
+$link-color         : $orange
+$link-hover-color   : $orange_dark
+$link-active-color  : $orange
+$link-visited-color : $orange
+$link-focus-color   : $orange
+body
+    :font-family $franklin-gothic-font-stack
+
+strong
+    :font-weight bold
+
+h1
+    font-size: 3em
+    line-height: 1
+    margin-bottom: 0.50em
+h2
+    font-size: 2em
+    margin-bottom: 0.75em
+h3
+    font-size: 1.5em
+    line-height: 1
+    margin-bottom: 1.00em
+h4
+    font-size: 1.2em
+    line-height: 1.25
+    margin-bottom: 1.25em
+h5
+    font-size: 1em
+    font-weight: bold
+    margin-bottom: 1.50em
+h6
+    font-size: 1em
+    font-weight: bold
+p
+    margin: 0 0 1.5em
+a
+    +link-colors($link-color, $link-hover-color, $link-active-color, $link-visited-color, $link-focus-color)
+blockquote
+    margin: 1.5em
+    color: $grey_dark
+    font-style: italic
+strong, dfn
+    font-weight: bold
+em, dfn
+    font-style: italic
+sup, sub
+    line-height: 0
+abbr, acronym
+    border-bottom: 1px dotted $grey_dark
+address
+    margin: 0 0 1.5em
+    font-style: italic
+del
+    color: $grey_dark
+pre
+    margin: 1.5em 0
+    white-space: pre
+li ul, li ol
+    margin: 0
+ul, ol
+    margin: 0
+    padding-left: 1.5em
+ul
+    list-style-type: none
+ol
+    list-style-type: decimal
+dl
+    margin: 0 0 1.5em 0
+dt
+    font-weight: bold
+dd
+    margin-left: 1.5em
+table
+    margin-bottom: 1.4em
+    width: 100%
+th
+    font-weight: bold
+thead th
+    background: $grey_lighter
+th, td, caption
+    padding: 4px 10px 4px 5px
+table.striped tr:nth-child(even) td, table tr.even td
+    background: #fff
+tfoot
+    font-style: italic
+caption
+    background: #fff

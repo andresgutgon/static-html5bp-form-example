@@ -1,0 +1,64 @@
+/* forms */
+form
+    fieldset
+        :padding 5px 20px
+        :margin 5px 0 0 0
+        :border 1px solid $classic_grey
+
+        legend
+            :font-size 12px
+            :color $grey_dark
+
+    div
+        :margin 0 0 8px 0
+        :width 100%
+        &.error
+            input,textarea
+                :border 3px solid $red_error
+                :background-color $red_error_lighter    
+                :color $red_error
+                &.radio_checkbox
+                    :border none
+                    :background transparent
+            em
+                :color $red_error
+                :display block
+                :padding 0 0 6px 0
+                :text-align left
+                :width auto
+                :font-style normal
+    label
+        :font-size 0.9em
+        :line-height 1.3
+        :display block
+        i
+            :font-size 10px
+            :font-style normal
+        &.radio_checkbox
+            :display inline
+    ul
+        :margin 0
+        :padding 0
+        :list-style none
+    input,textarea
+        float:none
+        :color $grey_dark
+        :font-family $franklin-gothic-font-stack
+        :font-size 0.8em
+        :line-height 1.2
+        :border 3px solid $grey_lighter
+        :margin 2px 0 0 0
+        :padding 8px 4px
+        :width 96%
+        :vertical-align top
+
+        &.radio_checkbox
+            :vertical-align middle
+            :margin 0 2px 0 0
+            :padding 0
+            :width auto
+            :border none
+    select
+        :width 100%
+        option
+            :width auto

@@ -1,0 +1,57 @@
+.commerce_redeem
+    +columns(6)
+    :padding-bottom 10%
+    .inner_commerce
+        :background-color $grey_extra_lighter
+        :padding 2em
+        :border 1px solid $grey_light
+        +border-radius(6px)
+        +single-box-shadow($grey_light, 0, 1px, 8px)
+        h2
+            :color $grey_dark
+            :margin-bottom 0.3em
+
+#commerce_last_redeemed
+    @extend .commerce_redeem
+    +omega
+    .inner_commerce
+        .list_items
+            li
+                &.first
+                    :margin-top 1em
+                    .main
+                        :color $grey_darker
+                .tag
+                    a
+                        :font-size 0.9em
+                        :font-weight normal
+                        :text-decoration none
+
+#commerce_redeem_code
+    @extend .commerce_redeem
+    +alpha
+    .inner_commerce
+        form
+            .code
+                input
+                    :border 1px solid $grey_darker
+                    :margin-bottom 0.3em
+                p
+                    :font-size 0.8em
+                    :line-height 1
+                    :color $grey_light
+                    :margin 0 0 0.2em 0
+
+$redeem_padding : 4%
+#redeen_by_article
+    @extend .page
+    .inner_page
+        :padding 0
+        #redeem_zone
+            +clearfix
+            :padding $redeem_padding
+            .alert-message
+                :margin 0
+        #article
+            @extend .article_detail
+

@@ -1,0 +1,21 @@
+#login_box
+    +columns(6)
+    //+pad(3,3)
+    //+alpha
+    //+omega
+    // Hacerlo asi como margins por problemas con el jodido explorer
+    :margin-left  columns(3) + gutter() + side-gutter()
+    :margin-right columns(3) + gutter() + side-gutter()
+    :margin-top 10%
+    :padding-bottom 10%
+    .inner_login
+        :background-color $grey_extra_lighter
+        :padding 2em
+        :border 1px solid $grey_light
+        +border-radius(6px)
+        +single-box-shadow($grey_light, 0, 1px, 8px)
+        h2
+            :color $grey_dark
+        .remember_password
+            :margin 1em 0 0 0
+            :text-align center

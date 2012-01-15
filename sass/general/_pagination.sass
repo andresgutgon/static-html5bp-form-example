@@ -1,0 +1,50 @@
+.pagination
+    +clearfix
+    :padding 0
+    :width 100%
+    :text-align center
+    :border-top 1px solid $grey_dark
+    :margin-top 1em
+    .pag_general
+        :font-size 1.1em
+        :display inline-block
+        :padding 0.5em 0.8em
+        :margin 0.2em 0.3em 0 0
+        +border-radius(3px)
+        :background-color $grey_extra_light
+        :text-decoration none
+        :border 1px solid $grey_light
+        :color $grey_dark
+    .hellip
+        @extend .pag_general
+        :border 0
+        +border-radius(0px)
+        :background-color #fff
+        .font-weight bold
+        :color $grey_darker
+        :padding-left 0.02em
+        :padding-right 0.02em
+    a
+        @extend .pag_general
+        +link-colors($grey_dark, #fff, $grey_dark, $grey_dark, $grey_dark)
+        &:hover
+            :background-color $link-color
+            :border 1px solid $link-color
+            +single-box-shadow($grey_light, 0, 2px, 4px)
+
+    span.current
+        @extend .pag_general
+        :margin-top -0.2em
+        :padding-top 0.8em
+        :padding-bottom 0.8em
+        :border-color $grey_dark
+        :border-top 0
+        :background-color #fff
+        +border-top-left-radius(0px)
+        +border-top-right-radius(0px)
+        +single-box-shadow($grey_light, 0, 2px, 4px)
+
+
+            
+        
+

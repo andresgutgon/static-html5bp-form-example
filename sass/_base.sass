@@ -1,0 +1,191 @@
+@import "compass/reset"
+@import "compass/typography"
+@import "compass/css3"
+@import "compass/layout"
+@import "compass/utilities"
+
+// Imports -------------------------------------------------------------------
+@import "sprites/general/*.png"
+
+@import "susy"
+
+// Grid ----------------------------------------------------------------------
+// My Imports -------------------------------------------------------------------
+@import "general/colors"
+@import "general/fonts"
+@import "general/forms"
+@import "general/css3buttons"
+@import "general/others"
+@import "general/message"
+@import "general/list_items"
+@import "general/pagination"
+
+$total-cols             : 12
+$col-width              : 4em
+$gutter-width           : 1em
+$side-gutter-width      : $gutter-width
+
+$show-grid-backgrounds  : true
+
++establish-baseline
+
+.author_style       
+    :margin-top 0.5em         
+    :font-size 90%
+    :color $grey_light
+    a
+        :font-size 90%                                                                                                        
+        +link-colors($grey_dark, $grey_darker, $grey_dark, $grey_dark, $grey_dark)  
+        :text-decoration none
+
+
+.breakline   
+    +clearfix
+    :margin 0
+    :padding 0    
+    div                                   
+        :width 100%        
+        :height 10px  
+        :margin 0em 0
+        :display block
+        +general-sprite("ornament")    
+        :background-repeat repeat-x    
+        :background-position 0 -15px          
+.wrapper
+    +clearfix
+    :margin 0
+    :padding 0
+    .layout
+        +container
+        :min-width 976px
+        //+susy-grid-background     
+
+.full_parent
+    +columns(12)
+    +alpha
+    +omega
+
+.draggable    
+    :z-index 4000
+    :cursor move
+    :width 110px
+    :height 110px   
+    :padding 5px 25px
+    div          
+        :width 110px
+        :height 110px
+        +general-sprite("sad")
+        :background-repeat no-repeat
+        &.happy
+            +general-sprite("happy")
+
+body
+    :background-image image-url("web.png") 
+    :background-repeat repeat
+    :background-position 0 0
+ 
+#forklink
+    :position fixed
+    :top 0em
+    :right 0em
+#drag-and-drop    
+    :margin-bottom 1em
+    @extend .wrapper 
+    :overflow visible
+    #free     
+        +columns(7)     
+        +omega 
+        .draggable-out
+            @extend .draggable
+     
+    #dragzone     
+        +columns(5)     
+        +alpha   
+        .innerdragzone
+            :border 6px dashed $grey_light
+            +border-radius(8px)
+            :padding 1em
+            h3       
+                :font-size 90%
+                :line-height 1.6em
+                :color  $grey_light    
+                :margin 0.8em 0 0 0
+                strong
+                    :font-weight bold
+                    :color $grey_darker 
+            .draggable-in
+                @extend .draggable
+     
+header         
+    @extend .wrapper
+    :padding 1.4em 0 1em 0
+    .content
+        +columns(5)
+        +pad(3,4)
+        +alpha
+        +omega
+        :text-align center
+        h1
+            :width 100%
+            :font-size 1.5em
+            :line-height 1.5   
+            :margin-bottom 0.1em
+            :font-weight bold
+            :color $button_green
+            //+text-shadow(0px 1px 0px $grey_dark)
+            strong
+                :color #fff
+
+.round_box
+    :background-color $grey_extra_light   
+    +border-radius(0.5em)  
+    +single-box-shadow($grey_dark, 0, 1px, 4px, false, true)
+    :padding 1.5em 1em 
+                
+#html5bpform       
+    @extend .wrapper 
+    :margin-top 0
+    #carousel
+        +columns(7)
+        +omega  
+        .gallery  
+            @extend .round_box    
+            :padding-bottom 0.1em   
+            .credits
+                @extend .author_style 
+                :width 100%
+                :text-align center
+            .innergallery  
+                img           
+                    :border 1px solid $grey_light  
+                    :padding 5px
+                    :margin 0 0 0.3em 0
+                    :background-color #fff
+                    :width 500px 
+                    :height 334px
+    #form
+        +columns(5)
+        +alpha    
+        form   
+            @extend .round_box      
+            &.allok
+                :background-color $green
+                h2
+                    :font-size 4em    
+                    :line-height 1em
+                    :color #fff
+                    :margin-bottom 0
+                    :font-weight bold    
+            textarea
+                :height 206px                
+
+#footer                 
+    :padding-bottom 1em
+    @extend .wrapper 
+    .author       
+        +columns(12)   
+        +alpha
+        +omega
+        :margin-top 0.5em         
+        :text-align right
+        @extend .author_style
